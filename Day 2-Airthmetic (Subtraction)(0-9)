@@ -1,0 +1,21 @@
+;Subtraction (Range:0-9)
+.model small
+.stack 100h
+.data
+.code
+main proc
+    mov al,'3'
+    mov bl,'2'
+
+    sub al,'0' ;'3' to 3
+    sub bl,'0' ;'2' to 2
+
+    sub al,bl ;(al=al-bl)
+
+    add al,'0' ;1 to '1'
+    ;Output
+    mov dl,al
+    mov ah,2
+    int 21h
+main endp
+end main
