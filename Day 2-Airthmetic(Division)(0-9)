@@ -1,0 +1,21 @@
+;Division(Range:0-9)
+.model small
+.stack 100h
+.data
+.code
+main proc
+    mov al,'4'
+    mov bl,'2'
+
+    sub al,'0' ;'4' to 4
+    sub bl,'0' ;'2' to 2
+
+    div bl ;(al=al/bl)
+
+    add al,'0' ;2 to '2'
+    ;Output
+    mov dl,al
+    mov ah,2
+    int 21h
+main endp
+end main
