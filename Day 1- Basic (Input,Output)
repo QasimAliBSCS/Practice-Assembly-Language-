@@ -1,0 +1,14 @@
+.model small
+.stack 100h
+.data
+    ;Data Variables
+
+.code
+main proc
+
+    ;main code
+
+    ;Semi-Colon is used for Comments
+
+main endp
+end main
