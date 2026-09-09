@@ -1,0 +1,17 @@
+.model small
+.stack 100h
+.data
+.code
+main proc
+    ;input
+    mov ah,1
+    int 21h
+    ;store input in base register
+    mov bl,al
+    ;mov base register to data register
+    mov dl,bl
+    ;output command
+    mov ah,2
+    int 21h
+main endp
+end main
